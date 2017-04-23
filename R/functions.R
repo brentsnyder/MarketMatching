@@ -179,7 +179,7 @@ dw <- function(y, yhat){
 #' \item{\code{DateVariable}}{The name of the date variable}
 
 
-best_matches <- function(data=NULL, id_variable=NULL, date_variable=NULL, matching_variable=NULL, warping_limit=1, parallel=TRUE, start_match_period=NULL, end_match_period=NULL, matches=5, dtw_emphasis=1){
+best_matches <- function(data=NULL, id_variable=NULL, date_variable=NULL, matching_variable=NULL, warping_limit=1, parallel=TRUE, start_match_period=NULL, end_match_period=NULL, matches=NULL, dtw_emphasis=1){
 
   ## Check the start date and end dates
   stopif(is.null(start_match_period), TRUE, "No start date provided")
