@@ -317,7 +317,7 @@ best_matches <- function(data=NULL, id_variable=NULL, date_variable=NULL, matchi
 #' \item{\code{CausalImpactObject}}{The CausalImpact object created}
 #' \item{\code{Coefficients}}{The average posterior coefficients}
 
-inference <- function(matched_markets=NULL, test_market=NULL, end_post_period=NULL, alpha=0.05, prior_level_sd=0.01, control_matches=5){
+inference <- function(matched_markets=NULL, test_market=NULL, end_post_period=NULL, alpha=0.05, prior_level_sd=0.01, control_matches=NULL){
 
   ## copy the distances
   mm <- dplyr::filter(matched_markets$BestMatches, rank<=control_matches)
